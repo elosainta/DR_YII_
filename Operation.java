@@ -101,7 +101,7 @@ public class Operation {
                     System.out.println("Are you sure you want to delete " + myCoins.get(selection - 1) + "? (Y/N)"); 
                     String confirmation = sc.next(); 
                     if(confirmation.equalsIgnoreCase("Y"))
-                        myCoins.remove(selection-1);
+                        myCoins.remove(selection - 1);
                     else
                         break;
                     
