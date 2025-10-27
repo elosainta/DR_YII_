@@ -10,12 +10,16 @@ struct product{
     char name[30];
     char product[30];
     double price;
-}
+};                          // every structs, must end with semicolons
 int main(){
-     struct product myProduct[100];
-     strcpy(myProduct[0].name, "edrian");
-     myProduct[0].product;
-     myProduct[0].price;
+    struct product myProduct[100];
+    strcpy(myProduct[0].name, "edrian");
+
+    myProduct[0].price = 2599.99; 
+    /* fixed where the line doesnt do anything , 
+    which MUST give values instead of 0 alone
+    */
+
     // variable types
     // int, long , double, char, char[], boolean
     int i = 1;
@@ -28,19 +32,29 @@ int main(){
     char name[30] = "Edrian";
     double d = 999.99;
 
-    // placeholder  %d (decimal), %c (char)
-    printf("%d. The result that %s gets for CSC305 is %c. His mark is:%0.2f " + i, name, c, d);
-    myPrinter(2002);
-    printf("sum of 1 and 2 is: %d, ", sum(1,2));
-    system("pause");
-    i_charDisplay(a,b);
-
-    printf("Enter Integer a: ");
+    printf("\nEnter Integer a: ");
     scanf("%d", &a);
-    printf("Enter Integer b: ");
+    printf("\nEnter Integer b: ");
     scanf("%d", &b);
 
-    // functions
+
+    // placeholder  %d (decimal), %c (char)
+    printf("%d. The result that %s gets for CSC305 is\n %c. His mark is:%0.2f \n" , i, name, c, d);
+
+    // fixed where should have not ADD strings and numbers ,. instead added ","
+    myPrinter(2002);
+    printf("sum of 1 and 2 is: %d, ", sum(1,2));
+
+    // the "system("pause");" ,, line does not work on linux instead tukar with:
+    printf("\nPlease Enter to continue");
+    getchar();
+    getchar(); 
+    //one clear newline ,,  one for wait
+
+
+    charDisplay(a,b);
+    // fixed typo will implement i_ (intelegence) later.....
+
     return 0;
 }
 
