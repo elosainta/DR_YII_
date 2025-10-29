@@ -6,11 +6,13 @@
 void myPrinter(int i);
 int sum(int a, int b);
 void charDisplay(int a ,int b);
+
 struct product{
     char name[30];
     char product[30];
     double price;
 };                          // every structs, must end with semicolons
+
 int main(){
     struct product myProduct[100];
     strcpy(myProduct[0].name, "edrian");
